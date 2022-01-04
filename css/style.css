@@ -17,6 +17,9 @@ body{
         padding: 0 15px;
         margin: auto;
     }
+    *,*::after,*::before{
+        font-size: 14px;
+    }
 }
 @media (min-width:768px) {
     .container{
@@ -38,6 +41,7 @@ body{
         padding: 0 15px;
         margin: 0 50px;
     }
+    
 }
 
 /* End Main Ruls */
@@ -104,7 +108,11 @@ header.app h3{
 .mainSelect >label{
     font-weight: bold;
 }
-
+@media (max-width:768px) {
+    .mainSelect{
+        font-weight: 400;
+    }
+}
 .mainSelect > #selectEle{
     padding: 10px 5px;
     background-color: #fff;
