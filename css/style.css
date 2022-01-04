@@ -9,7 +9,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #e4e4e4;
+    background-color: #f5f5f5;
 }
 /*  */
 @media (max-width:576px) {
@@ -98,39 +98,38 @@ header.app h3{
     width: 100%;
     margin: 15px 0;
     padding: 10px 15px;
-    background-color: #c4c4c4;
+    background-color: #e4e4e4;
     border-radius: 5px;
 }
 .mainSelect >label{
     font-weight: bold;
 }
+
 .mainSelect > #selectEle{
-    flex: 1;
-    -webkit-appearance: none;
     padding: 10px 5px;
-    border-radius: 5px;
     background-color: #fff;
     font-weight: 400;
+    flex: 1;
+    border-radius: 5px;
 }
-.mainSelect > .selectLogo{
-    position: absolute;
-    right: 2%;
-    z-index: 2;
-    padding: 5px;
-    font-size: 2rem;
-    color: #292929;
-    transition:  transform 0.3s ease-in;
+.mainSelect > #selectEle:focus{
+    border-color: #519259;
 }
-.mainSelect > .selectLogo.active{
-    transform: rotate(180deg);
+
+@media (max-width:768px) {
+    .mainContent > #selectEle{
+        flex:0;
+    }
 }
+
+
 .container .mainContent{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     padding: 15px;
-    background-color: #c4c4c4;
+    background-color: #e4e4e4;
     border-radius: 5px;
 }
 @media (max-width:768px) {
@@ -146,13 +145,14 @@ header.app h3{
     height: 400px;
 }
 .container .mainContent .imgContainer .actorImg{
-    aspect-ratio: 1 / 1;
     overflow: hidden;
+    display: flex;
+    aspect-ratio: 1 / 1;
+    box-shadow: 0 0 15px 0 #25252545;
     border-radius: 50%;
-    box-shadow: 0 0 15px 0 #519259;
 }
 .container .mainContent .imgContainer .actorImg img{
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
 }
 .container .mainContent .imgContainer p.actorName{
@@ -169,8 +169,7 @@ header.app h3{
     height: 8px;
     width: 100%;
     border-radius: 25px;
-    box-shadow: 0 5px 15px 0 #519259;
-
+    box-shadow: 0 0 15px 0 #25252545;
 }
 @media (max-width:768px) {
     .container .mainContent .imgContainer{
@@ -197,7 +196,7 @@ header.app h3{
 }
 @media (max-width:768px) {
     .container .mainContent .actorInformation{
-        width: 56%;
+        width: 100%;
         margin-top: 15px;
     }
 }
