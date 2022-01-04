@@ -1,0 +1,9 @@
+fixing audio dummy sound in ubuntu 20.04 :
+**********************************************
+
+sudo apt install linux-modules-extra-$(uname -r)
+sudo apt-get install --reinstall alsa-base pulseaudio
+sudo apt purge timidity-daemon
+sudo alsa force-reload
+
+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
