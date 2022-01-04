@@ -1,10 +1,9 @@
 /* Main Ruls */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 *,*::after,*::before{
     box-sizing: border-box;
     font-size: 16px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 body{
     margin: 0;
@@ -44,11 +43,12 @@ body{
 /* End Main Ruls */
 
 header.mainAppBody{
-    background: linear-gradient(120deg , #064635d7 , #519259 ,#ffbc35a8);
+    background: linear-gradient(170deg , #064635d7 , #519259 ,#ffbc35a8);
     height: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 15px 0 #252525c4;
 }
 header.mainAppBody > .container{
     display: flex;
@@ -85,7 +85,7 @@ header.app{
 }
 header.app h3{
     color: #fff;
-    font-family: 400;
+    font-weight: 400;
 }
 
 .mainSelect{
@@ -146,7 +146,6 @@ header.app h3{
 }
 .container .mainContent .imgContainer .actorImg{
     overflow: hidden;
-    display: flex;
     aspect-ratio: 1 / 1;
     box-shadow: 0 0 15px 0 #25252545;
     border-radius: 50%;
@@ -154,6 +153,10 @@ header.app h3{
 .container .mainContent .imgContainer .actorImg img{
     width: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease-out;
+}
+.container .mainContent .imgContainer .actorImg img:hover{
+    transform: scale(1.1) rotate(7deg);
 }
 .container .mainContent .imgContainer p.actorName{
     position: relative;
@@ -169,7 +172,7 @@ header.app h3{
     height: 8px;
     width: 100%;
     border-radius: 25px;
-    box-shadow: 0 0 15px 0 #25252545;
+    box-shadow: 0 8px 15px 0 #519259;
 }
 @media (max-width:768px) {
     .container .mainContent .imgContainer{
